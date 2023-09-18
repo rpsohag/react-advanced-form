@@ -1,42 +1,86 @@
-#root {
-  max-width: 1280px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 1rem;
+  background: #f0f0f0;
+}
+h1 {
+  margin: 1rem auto 2rem;
+  max-width: 1000px;
+}
+.container {
   margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+}
+.section {
+  background: #fff;
+  border: 1px solid #dedede;
+  border-radius: 8px;
   padding: 2rem;
-  text-align: center;
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.form.section {
+  flex: 0.5;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.results.section {
+  flex: 1;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.field {
+  margin-bottom: 1rem;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.advanced-form input,
+.advanced-form textarea,
+.advanced-form select {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 0.5rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.advanced-form input[type="radio"] {
+  margin-right: 0.5rem;
+  margin-bottom: 0.3rem;
 }
-
-.card {
-  padding: 2em;
+.advanced-form input[type="text"],
+.advanced-form textarea,
+.advanced-form select {
+  width: 100%;
 }
-
-.read-the-docs {
-  color: #888;
+.advanced-form textarea {
+  min-height: 100px;
+}
+.advanced-form label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.advanced-form field {
+  margin-bottom: 1rem;
+}
+.advanced-form .required,
+.advanced-form .error {
+  color: #d63642;
+}
+.advanced-form .error {
+  margin: 0.25rem 0;
+  display: block;
+}
+.advanced-form button {
+  border: 1px solid #3642d6;
+  border-radius: 4px;
+  background: #3642d6;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.advanced-form:hover {
+  filter: brightness(1.1);
+}
+.advanced-form button:disabled {
+  opacity: 0.5;
 }
